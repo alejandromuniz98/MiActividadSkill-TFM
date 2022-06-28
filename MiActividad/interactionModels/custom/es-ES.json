@@ -1,0 +1,281 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "mi actividad",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": [
+            "nada",
+            "cancelar",
+            "cancela",
+            "atras",
+            "atrás"
+          ]
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": [
+            "que puedo hacer",
+            "que hacer",
+            "ayuda"
+          ]
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": [
+            "sal",
+            "salir",
+            "parar",
+            "para"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "ClasificacionIntent",
+          "slots": [
+            {
+              "name": "RankingActividad",
+              "type": "TypeRankingActividad",
+              "samples": [
+                "clasifiación de {RankingActividad}",
+                "ranking de {RankingActividad}",
+                "el de {RankingActividad}",
+                "{RankingActividad}"
+              ]
+            }
+          ],
+          "samples": [
+            "como voy en la clasifiación",
+            "puesto en la clasificación",
+            "puesto en el ranking",
+            "en que posición voy",
+            "como voy en el ranking",
+            "clasifiación en el ranking",
+            "posición en el ranking",
+            "clasificación",
+            "clasificacion",
+            "ranking",
+            "ranking de {RankingActividad}",
+            "clasificacion de {RankingActividad}",
+            "clasificación de {RankingActividad}"
+          ]
+        },
+        {
+          "name": "ResumenActividadIntent",
+          "slots": [],
+          "samples": [
+            "resumen de actividad",
+            "resumen actividad",
+            "resumen de mi actividad",
+            "estado fisico",
+            "estado físico",
+            "actividad fisica",
+            "resumen",
+            "actividad física"
+          ]
+        },
+        {
+          "name": "ActividadIntent",
+          "slots": [
+            {
+              "name": "TipoActividad",
+              "type": "TypeActividad",
+              "samples": [
+                "{TipoActividad}"
+              ]
+            },
+            {
+              "name": "Tiempo",
+              "type": "AMAZON.DURATION",
+              "samples": [
+                "desde hace {Tiempo}",
+                "en {Tiempo}",
+                "en los últimos {Tiempo}",
+                "en las últimas {Tiempo}",
+                "las últimas {Tiempo}",
+                "los últimos {Tiempo}",
+                "{Tiempo}",
+                "Durante {Tiempo}",
+                "Desde {Tiempo}"
+              ]
+            }
+          ],
+          "samples": [
+            "{TipoActividad} en las últimas {Tiempo}",
+            "cuantas {TipoActividad} he tenido en las últimas {Tiempo}",
+            "cuantas {TipoActividad} he quemado en las últimas {Tiempo}",
+            "cuantas {TipoActividad} he hecho en las últimas {Tiempo}",
+            "cuantas {TipoActividad} he quemado en los últimos {Tiempo}",
+            "cuantos {TipoActividad} he quemado en los últimos {Tiempo}",
+            "cuantas {TipoActividad} he tenido en los últimos {Tiempo}",
+            "cuantos {TipoActividad} he tenido en los últimos {Tiempo}",
+            "cuantas {TipoActividad} he hecho en los últimos {Tiempo}",
+            "cuantos {TipoActividad} he hecho en los últimos {Tiempo}",
+            "{TipoActividad} en los últimos {Tiempo}",
+            "cuantos {TipoActividad} en los últimos {Tiempo}",
+            "cuantas {TipoActividad} en los últimos {Tiempo}",
+            "cuantos {TipoActividad} en {Tiempo}",
+            "numero de {TipoActividad} en {Tiempo}",
+            "cuantos {TipoActividad} he quemado durante {Tiempo}",
+            "cuantos {TipoActividad} he tenido durante {Tiempo}",
+            "cuantos {TipoActividad} he hecho durante {Tiempo}",
+            "cuantas {TipoActividad} he quemado durante {Tiempo}",
+            "cuantas {TipoActividad} he tenido durante {Tiempo}",
+            "cuantas {TipoActividad} he hecho durante {Tiempo}",
+            "{TipoActividad} durante {Tiempo}",
+            "{TipoActividad} {Tiempo}",
+            "{TipoActividad} en {Tiempo}",
+            "cuantas {TipoActividad} he quemado en {Tiempo}",
+            "cuantos {TipoActividad} he hecho en {Tiempo}",
+            "cuantos {TipoActividad} he tenido en {Tiempo}",
+            "cuantas {TipoActividad}  he hecho en {Tiempo}",
+            "cuantas {TipoActividad}  he tenido en {Tiempo}",
+            "cuantas {TipoActividad}  en {Tiempo}",
+            "{TipoActividad}  en {Tiempo}"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "distancia",
+                "synonyms": [
+                  "kilómetros",
+                  "kilometros"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "pasos"
+              }
+            },
+            {
+              "name": {
+                "value": "pulsaciones",
+                "synonyms": [
+                  "ritmo cardíaco",
+                  "ritmo cardiaco"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "calorias",
+                "synonyms": [
+                  "calorías"
+                ]
+              }
+            }
+          ],
+          "name": "TypeActividad"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "calorias",
+                "synonyms": [
+                  "calorías"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "pasos"
+              }
+            },
+            {
+              "name": {
+                "value": "distancia"
+              }
+            }
+          ],
+          "name": "TypeRankingActividad"
+        }
+      ]
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "ActividadIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "TipoActividad",
+              "type": "TypeActividad",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.614741957735.1336870968102"
+              }
+            },
+            {
+              "name": "Tiempo",
+              "type": "AMAZON.DURATION",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.614741957735.620338368777"
+              }
+            }
+          ]
+        },
+        {
+          "name": "ClasificacionIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "RankingActividad",
+              "type": "TypeRankingActividad",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.813301710185.1494330217110"
+              }
+            }
+          ]
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.614741957735.1336870968102",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "¿Qué quieres saber, tus pulsaciones, tus pasos, tus calorías o la distancia recorrida?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.614741957735.620338368777",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Vale, quieres saber tus {TipoActividad} . ¿Desde cuando?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.813301710185.1494330217110",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "¿Que ranking quieres que te muestre, el de calorías, el de pasos o el de distancia?"
+          }
+        ]
+      }
+    ]
+  },
+  "version": "39"
+}

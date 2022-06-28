@@ -1,0 +1,30 @@
+{
+  "type": "APL",
+  "version": "1.5",
+  "theme": "dark",
+  "import": [
+    {
+      "name": "alexa-layouts",
+      "version": "1.2.0"
+    }
+  ],
+  "mainTemplate": {
+    "parameters": [
+      "DataList"
+    ],
+    "items": [
+            {
+                "type": "AlexaImageList",
+                "headerTitle": "Resumen de mi actividad",
+                "hideOrdinal":true,
+                "imageHeight":"40vh",
+                "headerBackButton":false,
+                "headerAttributionImage": "https://i.ibb.co/f4Z42JV/icon-512-A2-Z.png",
+                "backgroundImageSource": "https://png.pngtree.com/thumb_back/fw800/back_our/20190622/ourmid/pngtree-green-fresh-flat-running-banner-background-image_229447.jpg",
+                "listItems": "${DataList.items}",
+                "imageBlurredBackground": false,
+                "backgroundColorOverlay": true
+            }
+        ]
+  }
+}
