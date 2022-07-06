@@ -1,0 +1,29 @@
+{
+    "type": "APL",
+    "version": "1.8",
+    "theme": "dark",
+    "import": [
+        {
+            "name": "alexa-layouts",
+            "version": "1.5.0"
+        }
+    ],
+    "mainTemplate": {
+        "parameters": [
+            "payload"
+        ],
+        "items": [
+            {
+                "type": "AlexaTextList",
+                "headerTitle": "Clasificación",
+                "headerBackButton": false,
+                "headerAttributionImage": "https://i.ibb.co/f4Z42JV/icon-512-A2-Z.png",
+                "backgroundImageSource": "https://media.istockphoto.com/vectors/hand-with-trophy-cup-successful-businessman-holding-golden-cup-award-vector-id1203743844?b=1&k=6&m=1203743844&s=612x612&w=0&h=lc5bS9sU8Kqu3XnpZbIzAxIQEybQa3U-QDQeZ6-rl2E=",
+                "listItems": "${payload.textListData.listItems}",
+                "touchForward": true,
+                "hideOrdinal": true,
+                "backgroundColorOverlay": true
+            }
+        ]
+    }
+}
